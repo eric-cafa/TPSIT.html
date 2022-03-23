@@ -1,0 +1,49 @@
+<script Language='JavaScript'>
+
+function inizia()
+{
+   var a=document.getElementById('A');
+ 
+   
+   setInterval(function () {
+  var colore = new Array();
+   const r = Math.random() * 256;
+   const g = Math.random() * 256;
+   const b = Math.random() * 256;
+   const rgb = `rgb(${r},${g},${b})`;
+      a.style.backgroundColor=rgb;
+   }, 500);
+}
+
+</SCRIPT>
+
+
+<htmlL>
+   <head>
+   <title>div con colori casualui </TITLE>
+   </HEAD>
+
+   <style type="text/css">
+     
+      #A
+      {
+         left:100px;
+         top:50px;
+         background-color:white;
+         position:absolute;
+         height:100px;
+         width:100px;
+         border-width:1px;
+         border:solid black;
+      }
+
+   </style>
+
+
+    <body onLoad="inizia()">
+
+    <div id='A'></DIV>
+
+   </body>
+
+</html>
