@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+div{
+ margin:2px;
+ padding:2px;
+ width: 200px;
+ height: 200px;
+position:relative;
+display: flex;
+float: left;
+}
+.rosso{
+    background-color: crimson;
+}
+.giallo{
+    background-color: rgb(227, 252, 8);
+}
+.blue{
+    background-color: darkblue;
+}
+.verde{
+    background-color:darkgreen;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="box1" class="rosso">
+
+    <button onclick="cambiacolore()">Change color</button>
+
+</div>
+<div id="box2" class="verde">
+
+    <button onclick="cambiacolore2()">Change color</button>
+
+</div>
+<div id="box3" class="blue">
+
+    <button onclick="cambiacolore3()">Change color</button>
+
+</div>
+<div id="box4" class="giallo">
+  
+    <button onclick="cambiacolore4()">Change color</button>
+
+</div>
+
+
+<script>
+    //javascript
+function cambiacolore() {
+    document.getElementById("box1").style.background="black";
+}
+function cambiacolore2() {
+    document.getElementById("box2").style.background="red";
+}
+function cambiacolore3() {
+    document.getElementById("box3").style.background="grey";
+}
+function cambiacolore4() {
+    document.getElementById("box4").style.background="purple";
+}
+
+
+</script>    
+
+   
+
+</body>
+</html>
