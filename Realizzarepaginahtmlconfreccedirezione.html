@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 150px; */
+  text-align: center;
+border: 1px solid black;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+</style>
+<script>
+  
+  function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "conteggio  " + localStorage.clickcount;
+  }
+}
+
+  function clickCounterb() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)-1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "conteggio  " + localStorage.clickcount;
+  }
+}
+</script>
+  </head>
+<body>
+ 
+
+ 
+<div id="result"></div>
+
+
+
+<div class="row">
+  <div class="column" style="background-color:red;">
+
+
+  </div>
+  <div class="column" style="background-color:red;">
+    <p><button onclick="clickCounter()" type="button">↑</button></p> 
+
+  </div>
+  <div class="column" style="background-color:red;">
+
+
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:red;">
+   <p><button onclick="clickCounter()" type="button">←</button></p>
+  </div>
+
+  
+  <div class="column" style="background-color:red;">
+  
+
+  </div>
+  <div class="column" style="background-color:red;">
+ <p><button onclick="clickCounterb()" type="button">→</button></p>
+ 
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:red;">
+
+  
+  </div>
+  <div class="column" style="background-color:red;">
+ <p><button onclick="clickCounterb()" type="button">↓</button></p>
+ 
+
+  </div>
+  <div class="column" style="background-color:red;">
+
+
+  </div>
+</div>
+ 
+</body>
+</html>
